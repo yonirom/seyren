@@ -81,6 +81,8 @@
         <org.slf4j.version>1.7.6</org.slf4j.version>
         <org.snmp4j.version>2.2.4</org.snmp4j.version>
         <org.springframework.version>3.2.4.RELEASE</org.springframework.version>
+        <com.google.api-client.version>1.17.0-rc</com.google.api-client.version>
+        <com.madhackerdesigns.jinder.version>0.0.1</com.madhackerdesigns.jinder.version>
     </properties>
     
     <prerequisites>
@@ -205,6 +207,21 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.google.api-client</groupId>
+                <artifactId>google-api-client</artifactId>
+                <version>${com.google.api-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.api-client</groupId>
+                <artifactId>google-api-client-gson</artifactId>
+                <version>${com.google.api-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.madhackerdesigns.jinder</groupId>
+                <artifactId>Campfire</artifactId>
+                <version>${com.madhackerdesigns.jinder.version}</version>
+            </dependency>
             <dependency>
                 <groupId>biz.neustar</groupId>
                 <artifactId>pagerduty</artifactId>

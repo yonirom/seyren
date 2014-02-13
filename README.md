@@ -15,6 +15,7 @@ Seyren ([/ˈsaɪ.rʌn/](http://en.wikipedia.org/wiki/Wikipedia:IPA_for_English#K
 ###Stand alone
 
 ```
+mvn install:install-file -DgroupId=com.madhackerdesigns.jinder -DartifactId=Campfire -Dversion=0.0.1 -Dpackaging=jar -Dfile=seyren-core/lib/jinder-0.0.1.jar 
 mvn clean package
 export GRAPHITE_URL=http://graphite.foohost.com:80
 java -jar seyren-web/target/seyren-web-*-war-exec.jar
@@ -79,6 +80,11 @@ open http://localhost:8080
 * `SNMP_PORT` - The SNMP port. Default: `162`
 * `SNMP_COMMUNITY` - The SNMP  community. Default: `public`
 * `SNMP_OID` - The SNMP OID. Default: `1.3.6.1.4.1.32473.1`
+
+#### [Campfire](http://www.campfire.com)
+* `CAMPFIRE_SUBDOMAIN` - The Campfire Subdomain. Default: ``
+* `CAMPFIRE_APITOKEN` - Campfire API Token. Default: ``
+* `CAMPFIRE_ROOM` - The Campfire room to notify. Default: `` (first available room)
 
 ###Cloud Formation
 

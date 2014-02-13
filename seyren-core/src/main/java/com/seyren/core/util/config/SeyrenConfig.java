@@ -71,6 +71,9 @@ public class SeyrenConfig {
     private final Integer snmpPort;
     private final String snmpCommunity;
     private final String snmpOID;
+    private final String campfireSubdomain;
+    private final String campfireApiToken;
+    private final String campfireRoom;
 
     public SeyrenConfig() {
         
@@ -129,6 +132,11 @@ public class SeyrenConfig {
         this.snmpPort = Integer.parseInt(configOrDefault("SNMP_PORT", "162"));
         this.snmpCommunity = configOrDefault("SNMP_COMMUNITY", "public");
         this.snmpOID = configOrDefault("SNMP_OID", "1.3.6.1.4.1.32473.1");
+
+        // Campfire
+        this.campfireSubdomain = configOrDefault("CAMPFIRE_SUBDOMAIN", "");
+        this.campfireApiToken = configOrDefault("CAMPFIRE_APITOKEN", "");
+        this.campfireRoom = configOrDefault("CAMPFIRE_ROOM", "");
 
     }
     
@@ -265,6 +273,21 @@ public class SeyrenConfig {
     @JsonIgnore
     public String getSnmpOID() {
         return snmpOID;
+    }
+    
+    @JsonIgnore
+    public String getCampfireSubdomain() {
+        return campfireSubdomain;
+    }
+    
+    @JsonIgnore
+    public String getCampfireApiToken() {
+        return campfireApiToken;
+    }
+    
+    @JsonIgnore
+    public String getCampfireRoom() {
+        return campfireRoom;
     }
     
     @JsonIgnore

@@ -12,6 +12,18 @@
 
     <dependencies>
         <dependency>
+          <groupId>com.google.api-client</groupId>
+          <artifactId>google-api-client</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>com.google.api-client</groupId>
+          <artifactId>google-api-client-gson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.madhackerdesigns.jinder</groupId>
+            <artifactId>Campfire</artifactId>
+        </dependency>
+        <dependency>
             <groupId>biz.neustar</groupId>
             <artifactId>pagerduty</artifactId>
         </dependency>
